@@ -1,0 +1,30 @@
+{
+    "name": "local/bitrix-local",
+    "description": "Workpiece for Bitrix projects",
+    "license": "MIT",
+    "prefer-stable": true,
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Cube\\": "lib/contollers/"
+        }
+    },
+    "require": {
+        "andreyryabin/sprint.migration": "^4.3",
+        "wikimedia/composer-merge-plugin": "^2.0",
+        "symfony/var-dumper": "^5.1",
+        "zircote/swagger-php": "^4.0"
+    },
+    "config": {
+        "vendor-dir": "../../../bitrix/vendor",
+        "allow-plugins": {
+            "composer/installers": true,
+            "wikimedia/composer-merge-plugin": false
+        }
+    },
+    "extra": {
+        "installer-paths": {
+            "../../../bitrix/modules/{$name}/": ["type:bitrix-module"]
+        }
+    }
+}
