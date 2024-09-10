@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Thelh\Controllers\Shop;
+namespace Gipercube\Api\Controllers\Shop;
 
 use Bitrix\Main\Loader;
 use \Bitrix\Catalog\PriceTable;
-use Thelh\Controllers\BaseController;
+use Gipercube\Api\Controllers\BaseController;
 use OpenApi\Attributes as OA;
 
 #[OA\Tag('catalog')]

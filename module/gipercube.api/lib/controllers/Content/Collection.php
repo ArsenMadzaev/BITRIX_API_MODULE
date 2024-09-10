@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Thelh\Controllers\Content;
+namespace Gipercube\Api\Controllers\Content;
 
-use Thelh\Controllers\BaseController;
+use Gipercube\Api\Controllers\BaseController;
 use Bitrix\Main\Context;
 use Bitrix\Main\Loader;
 use Bitrix\Main\Error;

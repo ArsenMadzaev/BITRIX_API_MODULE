@@ -6,7 +6,7 @@
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "Cube\\": "lib/contollers/"
+            "Gipercube\\": "lib/contollers/"
         }
     },
     "require": {

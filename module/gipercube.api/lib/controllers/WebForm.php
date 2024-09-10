@@ -1,9 +1,9 @@
 <?php
 
-namespace Thelh\Controllers;
+namespace Gipercube\Api\Controllers;
 
 use Bitrix\Main\Error;
-use Thelh\Controllers\BaseController;
+use Gipercube\Api\Controllers\BaseController;
 /**
  * Контроллер Веб-форм
  */

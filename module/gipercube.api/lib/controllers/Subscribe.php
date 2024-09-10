@@ -1,10 +1,10 @@
 <?php
 
-namespace Thelh\Controllers;
+namespace Gipercube\Api\Controllers;
 
 use Bitrix\Main\Error;
 use Bitrix\Main\Context;
-use Thelh\Controllers\BaseController;
+use Gipercube\Api\Controllers\BaseController;
 use OpenApi\Attributes as OA;
 
 #[OA\Tag('subscribe')]

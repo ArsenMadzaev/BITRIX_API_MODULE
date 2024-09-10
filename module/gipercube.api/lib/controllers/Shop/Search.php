@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Thelh\Controllers\Shop;
+namespace Gipercube\Api\Controllers\Shop;
 
-use Thelh\Controllers\BaseController;
+use Gipercube\Api\Controllers\BaseController;
 use Bitrix\Main\Loader;
 use OpenApi\Attributes as OA;
 
@@ -73,7 +73,7 @@ class Search extends BaseController
         $productIds = array_unique($productIds);
 
         // Передаем действие в контроллер каталога
-        $result = $this->forward(\Thelh\Controllers\Shop\Catalog::class, 'list', [
+        $result = $this->forward(\Gipercube\Api\Controllers\Shop\Catalog::class, 'list', [
             'iblockId' => $iblockId,
             'filter' => [
                 'ID' => $productIds

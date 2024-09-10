@@ -1,6 +1,6 @@
 <?php
 
-namespace Thelh\Controllers;
+namespace Gipercube\Api\Controllers;
 
 use Bitrix\Main\Engine\ActionFilter;
 use Bitrix\Main\Response;
@@ -34,7 +34,7 @@ class BaseController extends \Bitrix\Main\Engine\Controller
                 ]
             ),
             new ActionFilter\Csrf(false),
-            new \Thelh\Middleware\Cors()
+            new \Gipercube\Api\Middleware\Cors()
         ];
     }
 

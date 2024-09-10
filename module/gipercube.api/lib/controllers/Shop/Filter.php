@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Thelh\Controllers\Shop;
+namespace Gipercube\Api\Controllers\Shop;
 
-use Thelh\Controllers\BaseController;
+use Gipercube\Api\Controllers\BaseController;
 use Bitrix\Main\Request;
 use Bitrix\Main\Loader;
 use OpenApi\Attributes as OA;
@@ -16,7 +16,7 @@ use OpenApi\Attributes as OA;
 class Filter extends BaseController
 {
     // В arResult нужно отдать результат в переменную
-    // Thelh\Controllers\Shop\Filter::$resultFilter = $arResult
+    // Gipercube\Api\Controllers\Shop\Filter::$resultFilter = $arResult
     public static $resultFilter = [];
 
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace Thelh\Controllers;
+namespace Gipercube\Api\Controllers;
 
 use Bitrix\Main\Application;
 use OpenApi\Attributes as OA;
-use Thelh\Controllers\BaseController;
+use Gipercube\Api\Controllers\BaseController;
 
 // Определяем локальный домен
 define('DOMAIN_NAME_BACKEND', getenv('DOMAIN_NAME_BACKEND') ? '//' . getenv('DOMAIN_NAME_BACKEND') : '//' . SITE_SERVER_NAME);

@@ -1,6 +1,6 @@
 <?php
 
-namespace Thelh\Controllers;
+namespace Gipercube\Api\Controllers;
 
 use Bitrix\Main\Context;
 use Bitrix\Main\Engine\CurrentUser;

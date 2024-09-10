@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Thelh\Controllers\Shop;
+namespace Gipercube\Api\Controllers\Shop;
 
 use Bitrix\Main\Context;
 use Bitrix\Main\Engine\CurrentUser;
 use Bitrix\Main\Error;
-use Thelh\Controllers\BaseController;
+use Gipercube\Api\Controllers\BaseController;
 use Bitrix\Main\Loader;
 use Bitrix\Main\Localization\Loc;
 use Bitrix\Main\Engine\UrlManager;
@@ -39,7 +39,7 @@ class Order extends BaseController
     /**
      * Обработка заказа
      * аналог файла, для работы через контроллер /bitrix/components/bitrix/sale.order.ajax/ajax.php
-     * @see https://gitlab.thelh.net/lighthouse/submodules/vue-sale-order-ajax
+     * @see https://gitlab.Gipercube\Api.net/lighthouse/submodules/vue-sale-order-ajax
      *
      * @return void
      */
@@ -173,7 +173,7 @@ class Order extends BaseController
 
         $catalogItemsData = [];
         foreach ($iblockItems as $iblockId => $productIds) {
-            $catalogItemsResult = $this->forward(\Thelh\Controllers\Shop\Catalog::class, 'list', [
+            $catalogItemsResult = $this->forward(\Gipercube\Api\Controllers\Shop\Catalog::class, 'list', [
                 'iblockId' => $iblockId,
                 'filter' => [
                     'ID' => $productIds

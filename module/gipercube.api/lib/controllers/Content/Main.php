@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Thelh\Controllers\Content;
+namespace Gipercube\Api\Controllers\Content;
 
-use Thelh\Controllers\BaseController;
+use Gipercube\Api\Controllers\BaseController;
 use Bitrix\Iblock\Model\PropertyFeature;
 use Bitrix\Main\Context;
 use Bitrix\Main\Loader;
 use Bitrix\Main\Error;
-use Thelh\Controllers\Shop\Catalog;
+use Gipercube\Api\Controllers\Shop\Catalog;
 use OpenApi\Attributes as OA;
 
 #[OA\Tag('main')]

@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Thelh\Controllers\Content;
+namespace Gipercube\Api\Controllers\Content;
 
-use Thelh\Controllers\BaseController;
+use Gipercube\Api\Controllers\BaseController;
 use Bitrix\Main\Context;
 use Bitrix\Main\Error;
 use Bitrix\Main\Loader;
 use OpenApi\Attributes as OA;
-use Thelh\Controllers\Shop\Catalog;
+use Gipercube\Api\Controllers\Shop\Catalog;
 
 /**
  * Кастомное меню для логикик genious
@@ -189,7 +189,7 @@ class Menu extends BaseController
                 "SEF_BASE_URL"     => "/catalog/",
                 "SECTION_PAGE_URL" => "#SECTION_CODE#",
                 "IBLOCK_TYPE"      => "catalog",
-                "IBLOCK_ID"        => \Thelh\Controllers\Shop\Catalog::CATLOG_IBLOCK_ID,
+                "IBLOCK_ID"        => \Gipercube\Api\Controllers\Shop\Catalog::CATLOG_IBLOCK_ID,
                 "DEPTH_LEVEL"      => "3",
                 "CACHE_TYPE"       => "N",
             ),

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Thelh\Controllers\Shop;
+namespace Gipercube\Api\Controllers\Shop;
 
-use Thelh\Controllers\BaseController;
+use Gipercube\Api\Controllers\BaseController;
 use Bitrix\Iblock\Model\PropertyFeature;
 use Bitrix\Main\Context;
 use Bitrix\Main\Loader;
