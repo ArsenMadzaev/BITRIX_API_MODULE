@@ -6,7 +6,7 @@
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "Gipercube\\Api\\": "lib/contollers/"
+            "Gipercube\\Api\\": "lib/"
         }
     },
     "require": {
@@ -16,7 +16,6 @@
         "zircote/swagger-php": "^4.0"
     },
     "config": {
-        "vendor-dir": "../../../bitrix/vendor",
         "allow-plugins": {
             "composer/installers": true,
             "wikimedia/composer-merge-plugin": false

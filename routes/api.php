@@ -4,6 +4,12 @@ use Bitrix\Main\Routing\RoutingConfigurator;
 return function (RoutingConfigurator $routes) {
     //Интернет магазин
     $routes->post('/api/v1/catalog/', fn() => (new \Gipercube\Api\Controllers\Shop\Catalog())->runAction('list')); 
+
+    // $routes->post('/api/v1/catalog/', [\Gipercube\Api\Controllers\Shop\Catalog::class, 'list']); 
+
+    $routes->post('/api/payments/', [\Gipercube\Api\Controllers\Payments::class, 'list']);
+
+    $routes->post('/api/v1/test/', [\Gipercube\Api\Controllers\Shop\Catalog::class, 'list']); 
     // $routes->post('/api/delBasket/', fn() => (new \Cube\Controllers\Shop\Basket())->runAction('delFromBasket'));
     // $routes->post('/api/addFavorite/{elementId}', fn() => (new \Cube\Controllers\Shop\Favorites())->runAction('addFavorite')); 
     // $routes->post('/api/removeFavorite/{elementId}', fn() => (new \Cube\Controllers\Shop\Favorites())->runAction('removeFavorite')); 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Cube\Api;
+namespace Gipercube\Api;
 
 class Application
 {
