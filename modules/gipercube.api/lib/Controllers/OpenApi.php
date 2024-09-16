@@ -5,6 +5,7 @@ namespace Gipercube\Api\Controllers;
 use Bitrix\Main\Application;
 use OpenApi\Attributes as OA;
 use Gipercube\Api\Controllers\BaseController;
+use Composer\Installer\LibraryInstaller;
 
 // Определяем локальный домен
 define('DOMAIN_NAME_BACKEND', getenv('DOMAIN_NAME_BACKEND') ? '//' . getenv('DOMAIN_NAME_BACKEND') : '//' . SITE_SERVER_NAME);
@@ -18,7 +19,7 @@ class OpenApi extends BaseController
     #[OA\Response(response: 200, description: 'Сегенерированный YAML файл Openapi 3.0')]
     public function generateAction()
     {
-        $openapi = \OpenApi\Generator::scan([$_SERVER['DOCUMENT_ROOT'] . '/local']);
+        $openapi = \OpenApi\Generator::scan([$_SERVER['DOCUMENT_ROOT'] . '/local/modules/gipercube.api/lib']);
         $application = Application::getInstance();
         $response = $application->getContext()->getResponse();
         $response->addHeader('Content-Type', 'application/x-yaml');
