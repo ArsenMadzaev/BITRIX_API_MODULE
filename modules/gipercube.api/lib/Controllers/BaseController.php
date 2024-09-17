@@ -34,7 +34,7 @@ class BaseController extends \Bitrix\Main\Engine\Controller
                 ]
             ),
             new ActionFilter\Csrf(false),
-            // new \Gipercube\Api\Middleware\Cors()
+            new \Gipercube\Api\Middleware\Cors()
         ];
     }
 

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e37b1978f2d6266c2722c96581117c52",
+    "content-hash": "5d1a1537a7c471f2dc358c554ac74c71",
     "packages": [
         {
             "name": "andreyryabin/sprint.migration",
@@ -461,16 +461,16 @@
         },
         {
             "name": "psr/log",
-            "version": "3.0.0",
+            "version": "3.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "fe5ea303b0887d5caefd3d431c3e61ad47037001"
+                "reference": "f16e1d5863e37f8d8c2a01719f5b34baa2b714d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/fe5ea303b0887d5caefd3d431c3e61ad47037001",
-                "reference": "fe5ea303b0887d5caefd3d431c3e61ad47037001",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/f16e1d5863e37f8d8c2a01719f5b34baa2b714d3",
+                "reference": "f16e1d5863e37f8d8c2a01719f5b34baa2b714d3",
                 "shasum": ""
             },
             "require": {
@@ -505,9 +505,76 @@
                 "psr-3"
             ],
             "support": {
-                "source": "https://github.com/php-fig/log/tree/3.0.0"
+                "source": "https://github.com/php-fig/log/tree/3.0.2"
             },
-            "time": "2021-07-14T16:46:02+00:00"
+            "time": "2024-09-11T13:17:53+00:00"
+        },
+        {
+            "name": "symfony/deprecation-contracts",
+            "version": "v3.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/deprecation-contracts.git",
+                "reference": "0e0d29ce1f20deffb4ab1b016a7257c4f1e789a1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/0e0d29ce1f20deffb4ab1b016a7257c4f1e789a1",
+                "reference": "0e0d29ce1f20deffb4ab1b016a7257c4f1e789a1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "3.5-dev"
+                },
+                "thanks": {
+                    "name": "symfony/contracts",
+                    "url": "https://github.com/symfony/contracts"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "function.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "A generic function and convention to trigger deprecation notices",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.5.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-04-18T09:32:20+00:00"
         },
         {
             "name": "symfony/finder",
@@ -1030,30 +1097,36 @@
         },
         {
             "name": "zircote/swagger-php",
-            "version": "4.2.14",
+            "version": "4.10.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zircote/swagger-php.git",
-                "reference": "975c598084a1f8e7acccaa68aed12c803cebbd6a"
+                "reference": "0840dad40fd6759912485f34bfccf13b49b29226"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zircote/swagger-php/zipball/975c598084a1f8e7acccaa68aed12c803cebbd6a",
-                "reference": "975c598084a1f8e7acccaa68aed12c803cebbd6a",
+                "url": "https://api.github.com/repos/zircote/swagger-php/zipball/0840dad40fd6759912485f34bfccf13b49b29226",
+                "reference": "0840dad40fd6759912485f34bfccf13b49b29226",
                 "shasum": ""
             },
             "require": {
-                "doctrine/annotations": "^1.7",
                 "ext-json": "*",
                 "php": ">=7.2",
-                "psr/log": "^1.1 || ^2.0 || 3.0",
+                "psr/log": "^1.1 || ^2.0 || ^3.0",
+                "symfony/deprecation-contracts": "^2 || ^3",
                 "symfony/finder": ">=2.2",
                 "symfony/yaml": ">=3.3"
             },
             "require-dev": {
                 "composer/package-versions-deprecated": "^1.11",
-                "friendsofphp/php-cs-fixer": "^2.17 || ^3.0",
-                "phpunit/phpunit": ">=8"
+                "doctrine/annotations": "^1.7 || ^2.0",
+                "friendsofphp/php-cs-fixer": "^2.17 || ^3.47.1",
+                "phpstan/phpstan": "^1.6",
+                "phpunit/phpunit": ">=8",
+                "vimeo/psalm": "^4.23"
+            },
+            "suggest": {
+                "doctrine/annotations": "^1.7 || ^2.0"
             },
             "bin": [
                 "bin/openapi"
@@ -1099,9 +1172,9 @@
             ],
             "support": {
                 "issues": "https://github.com/zircote/swagger-php/issues",
-                "source": "https://github.com/zircote/swagger-php/tree/4.2.14"
+                "source": "https://github.com/zircote/swagger-php/tree/4.10.5"
             },
-            "time": "2022-04-01T08:53:53+00:00"
+            "time": "2024-07-16T03:13:27+00:00"
         }
     ],
     "packages-dev": [],

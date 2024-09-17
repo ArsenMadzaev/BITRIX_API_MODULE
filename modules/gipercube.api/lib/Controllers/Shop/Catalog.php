@@ -22,7 +22,7 @@ class Catalog extends BaseController
 {
     public const DEFAULT_SIZE_PAGE = 30;
 
-    public const CATLOG_IBLOCK_ID = 1;
+    public const CATLOG_IBLOCK_ID = 2;
     public const OFFERS_IBLOCK_ID = 5;
 
     /**
@@ -75,6 +75,7 @@ class Catalog extends BaseController
         // Получаем объект и далее сущность инфоблока
         $iblockObject = \Bitrix\Iblock\Iblock::wakeUp($iblockId);
         $iblockEntity = $iblockObject->getEntityDataClass();
+
         if (!$iblockEntity) {
             Context::getCurrent()->getResponse()->setStatus(500);
             $this->addError(new Error('iblock ' . $iblockId . ' not found'));

@@ -13,7 +13,7 @@
         "andreyryabin/sprint.migration": "^4.3",
         "wikimedia/composer-merge-plugin": "^2.0",
         "symfony/var-dumper": "^5.1",
-        "zircote/swagger-php": "4.2.14",
+        "zircote/swagger-php": "4.10.5",
         "doctrine/annotations": "^1.0",
         "composer/installers": "~1.0"
     },
