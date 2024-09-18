@@ -23,8 +23,8 @@ class Blog extends BaseController
      * @return array|null
      */
     #[OA\Get(path: '/api/v1/blog', tags: ['blog'])]
-    #[OA\QueryParameter(name: 'page', description: 'Страница пагинации', example: 1)]
-    #[OA\QueryParameter(name: 'size', description: 'Кол-во элементов на страницу', example: self::DEFAULT_SIZE_PAGE)]
+    #[OA\QueryParameter(name: 'page', description: 'Страница пагинации', example: 1, required: false, schema: new OA\Schema(type: 'integer'))]
+    #[OA\QueryParameter(name: 'size', description: 'Кол-во элементов на страницу', example: self::DEFAULT_SIZE_PAGE, required: false, schema: new OA\Schema(type: 'integer'))]
     #[OA\Response(response: 200, description: 'Блог')]
     #[OA\Response(response: 400, description: 'Неверный запрос')]
     public function listAction(int $page = 1, int $size = self::DEFAULT_SIZE_PAGE, PageNavigation $pageNavigation = null): ?array
@@ -101,7 +101,7 @@ class Blog extends BaseController
      * @return array|null
      */
     #[OA\Get(path: '/api/v1/blog/{code}', tags: ['blog'])]
-    #[OA\PathParameter(name: 'code')]
+    #[OA\PathParameter(name: 'code', description: 'Символьный код', example: 1, required: true, schema: new OA\Schema(type: 'string'))]
     #[OA\Response(response: 200, description: 'Статья')]
     #[OA\Response(response: 404, description: 'Страница не найдена')]
     #[OA\Response(response: 'default', description: 'Error')]

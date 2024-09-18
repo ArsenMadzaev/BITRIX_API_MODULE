@@ -7,3 +7,5 @@ use Bitrix\Main\Loader;
 
 Loader::includeModule('fi1a.bitrixrequire');
 ```
+
+в каталоге должен быть символьный код апи
