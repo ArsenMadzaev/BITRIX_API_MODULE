@@ -1,4 +1,6 @@
-/php_interface
-/templates
-/components
+/*
 /modules/gipercube.api/vendor
+/modules/*
+!/modules/gipercube.api
+!/routers
+!/modules
