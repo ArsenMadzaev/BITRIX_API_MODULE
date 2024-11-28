@@ -1,11 +1,10 @@
-## Подключение vendor/autoload.php
+## Установка
 
-Для подключения vendor/autoload.php достаточно в файле php_interface/init.php подключить модуль 'fi1a.bitrixrequire':
-
-```php
-use Bitrix\Main\Loader;
-
-Loader::includeModule('fi1a.bitrixrequire');
+1. Клонируем или скачиваем модуль в директорию ```bash /local/ ```.
+2. В папке модуля (```bash /local/modules/gipercube.api/  ```) устанавливаем пакеты компосера.
+```bash
+    composer i
 ```
-
-в каталоге должен быть символьный код апи
+3. Если ранее на сайте не использовался роутинг BITRIX, производим манипуляции из этого урока [этого урока](https://dev.1c-bitrix.ru/learning/course/index.php?COURSE_ID=43&CHAPTER_ID=013764).
+4. В админке битрикса заходим  в ( Marketplace->Установленные решения ) находим модуль находим интеграция ( Интеграция с мобильным приложением (gipercube.api) ) и устанавливаем.
+5. Для корректной работы модуля в ИБ каталога должен быть символьный код апи. 
