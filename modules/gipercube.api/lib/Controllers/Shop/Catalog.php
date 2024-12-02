@@ -22,7 +22,7 @@ class Catalog extends BaseController
 {
     public const DEFAULT_SIZE_PAGE = 30;
 
-    public const CATLOG_IBLOCK_ID = 2;
+    public const CATLOG_IBLOCK_ID = 34;
     public const OFFERS_IBLOCK_ID = 5;
 
     /**
@@ -270,7 +270,7 @@ class Catalog extends BaseController
     #[OA\Response(response: 200, description: 'Список разделов каталога')]
     #[OA\Response(response: 400, description: 'Неверный запрос')]
     #[OA\Response(response: 404, description: 'Страница не найдена')]
-    public function sectionListAction(string|int $iblockId = self::CATLOG_IBLOCK_ID, $select = [], array $filter = [], int $page = 1, int $size = self::DEFAULT_SIZE_PAGE, PageNavigation $pageNavigation = null): ?array
+    public function sectionListAction(int $iblockId = self::CATLOG_IBLOCK_ID, $select = [], array $filter = [], int $page = 1, int $size = self::DEFAULT_SIZE_PAGE, PageNavigation $pageNavigation = null): ?array
     {
         Loader::includeModule('iblock');
         Loader::includeModule('catalog');

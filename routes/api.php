@@ -11,6 +11,9 @@ return function (RoutingConfigurator $routes) {
     $routes->post('/api/payments/', [\Gipercube\Api\Controllers\Payments::class, 'list']);
 
     $routes->get('/api/v1/catalog', [\Gipercube\Api\Controllers\Shop\Catalog::class, 'list']); 
+
+    $routes->get('/api/v1/catalog/sections', [\Gipercube\Api\Controllers\Shop\Catalog::class, 'sectionList']);
+    
     // $routes->post('/api/delBasket/', fn() => (new \Cube\Controllers\Shop\Basket())->runAction('delFromBasket'));
     // $routes->post('/api/addFavorite/{elementId}', fn() => (new \Cube\Controllers\Shop\Favorites())->runAction('addFavorite')); 
     // $routes->post('/api/removeFavorite/{elementId}', fn() => (new \Cube\Controllers\Shop\Favorites())->runAction('removeFavorite')); 
