@@ -5,12 +5,16 @@ return function (RoutingConfigurator $routes) {
     //Интернет магазин
     // $routes->post('/api/v1/catalog/', fn() => (new \Gipercube\Api\Controllers\Shop\Catalog())->runAction('list')); 
 
+    $routes->get('/api/v1/catalog', [\Gipercube\Api\Controllers\Shop\Catalog::class, 'list']); 
+
+    $routes->get('/api/v1/catalog/product/{code}', [\Gipercube\Api\Controllers\Shop\Catalog::class, 'get']); 
+
     $routes->get('/api/v1/openapi/', [\Gipercube\Api\Controllers\OpenApi::class, 'generate']); 
     // $routes->post('/api/v1/catalog/', [\Gipercube\Api\Controllers\Shop\Catalog::class, 'list']); 
 
     $routes->post('/api/payments/', [\Gipercube\Api\Controllers\Payments::class, 'list']);
-
-    $routes->get('/api/v1/catalog', [\Gipercube\Api\Controllers\Shop\Catalog::class, 'list']); 
+    
+    $routes->get('/api/v1/prices', [\Gipercube\Api\Controllers\Shop\Prices::class, 'list']); 
 
     $routes->get('/api/v1/catalog/sections', [\Gipercube\Api\Controllers\Shop\Catalog::class, 'sectionList']);
     

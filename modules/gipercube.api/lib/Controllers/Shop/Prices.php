@@ -13,7 +13,7 @@ use OpenApi\Attributes as OA;
 class Prices extends BaseController
 {
     public const DEFAULT_USER_GROUP = [2];   // Все пользователи
-    public const DEFAULT_PRICE_GROUP_ID = 1; // Тип цен BASE
+    public const DEFAULT_PRICE_GROUP_ID = 8; // Тип цен BASE
 
     /**
      * Получение цен для товаров

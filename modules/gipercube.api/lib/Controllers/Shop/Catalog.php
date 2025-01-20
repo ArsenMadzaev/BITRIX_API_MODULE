@@ -186,15 +186,15 @@ class Catalog extends BaseController
     #[OA\Response(response: 200, description: 'Список элементов каталога')]
     #[OA\Response(response: 400, description: 'Неверный запрос')]
     #[OA\Response(response: 404, description: 'Страница не найдена')]
-    public function getAction(string|int $iblockId = self::CATLOG_IBLOCK_ID, string|int $code): ?array
+    public function getAction(int $iblockId = self::CATLOG_IBLOCK_ID, string $code = ''): ?array
     {
         Loader::includeModule('iblock');
         Loader::includeModule('catalog');
-
+        
         // Получение свойств из механизма единого управления свойствами.
         // @see https://dev.1c-bitrix.ru/learning/course/index.php?COURSE_ID=42&LESSON_ID=1986
         $properties = PropertyFeature::getDetailPageShowPropertyCodes($iblockId, ['CODE' => 'Y']) ?? [];
-
+        
         $result = $this->listAction(
             iblockId: $iblockId,
             select: array_merge($this->getElementEntityAllowedList(), [
@@ -206,7 +206,7 @@ class Catalog extends BaseController
                 '=CODE'   => $code
             ]
         );
-
+       
         // Детальные свойфства для детальной
         if (!empty($result['items'])) {
             $result = reset($result['items']);
@@ -239,7 +239,7 @@ class Catalog extends BaseController
             // Получаем SEO параметры
             $ipropSectionValues = new \Bitrix\Iblock\InheritedProperty\ElementValues($iblockId, $result['ID']);
             $seoFields = $ipropSectionValues->getValues();
-
+          
             $result['meta'] = [
                 'metaTitle'       => $seoFields['ELEMENT_META_TITLE'] ?? null,
                 'metaDescription' => $seoFields['ELEMENT_META_DESCRIPTION'] ?? null,
