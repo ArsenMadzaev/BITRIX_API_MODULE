@@ -3,14 +3,26 @@ use Bitrix\Main\Routing\RoutingConfigurator;
 
 return function (RoutingConfigurator $routes) {
     //Интернет магазин
+
+    //Каталог
     // $routes->post('/api/v1/catalog/', fn() => (new \Gipercube\Api\Controllers\Shop\Catalog())->runAction('list')); 
 
     $routes->get('/api/v1/catalog', [\Gipercube\Api\Controllers\Shop\Catalog::class, 'list']); 
 
     $routes->get('/api/v1/catalog/product/{code}', [\Gipercube\Api\Controllers\Shop\Catalog::class, 'get']); 
 
-    $routes->get('/api/v1/openapi/', [\Gipercube\Api\Controllers\OpenApi::class, 'generate']); 
+    $routes->get('/api/v1/catalog/', [\Gipercube\Api\Controllers\Shop\Catalog::class, 'list']); 
+
+    $routes->get('/api/v1/catalog/', [\Gipercube\Api\Controllers\Shop\Catalog::class, 'list']); 
+
+    //Каталог конец
+
+    //Корзина
+
+    //Корзина конец
     // $routes->post('/api/v1/catalog/', [\Gipercube\Api\Controllers\Shop\Catalog::class, 'list']); 
+
+    $routes->get('/api/v1/openapi/', [\Gipercube\Api\Controllers\OpenApi::class, 'generate']); 
 
     $routes->post('/api/payments/', [\Gipercube\Api\Controllers\Payments::class, 'list']);
     
