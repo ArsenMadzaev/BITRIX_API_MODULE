@@ -11,9 +11,9 @@ return function (RoutingConfigurator $routes) {
 
     $routes->get('/api/v1/catalog/product/{code}', [\Gipercube\Api\Controllers\Shop\Catalog::class, 'get']); 
 
-    $routes->get('/api/v1/catalog/', [\Gipercube\Api\Controllers\Shop\Catalog::class, 'list']); 
+    $routes->get('/api/v1/catalog/sections', [\Gipercube\Api\Controllers\Shop\Catalog::class, 'sectionList']); 
 
-    $routes->get('/api/v1/catalog/', [\Gipercube\Api\Controllers\Shop\Catalog::class, 'list']); 
+    $routes->get('/api/v1/catalog/section/{code}', [\Gipercube\Api\Controllers\Shop\Catalog::class, 'sectionItems']); 
 
     //Каталог конец
 

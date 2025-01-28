@@ -355,7 +355,7 @@ class Catalog extends BaseController
     #[OA\Response(response: 200, description: 'Список элементов каталога и инфо о разделе')]
     #[OA\Response(response: 400, description: 'Неверный запрос')]
     #[OA\Response(response: 404, description: 'Страница не найдена')]
-    public function sectionItemsAction(string|int $iblockId = self::CATLOG_IBLOCK_ID, string|int $code, array $select = [], array $filter = [], int $page = 1, int $size = self::DEFAULT_SIZE_PAGE, PageNavigation $pageNavigation = null): ?array
+    public function sectionItemsAction(int $iblockId = self::CATLOG_IBLOCK_ID, string $code = '', array $select = [], array $filter = [], int $page = 1, int $size = self::DEFAULT_SIZE_PAGE, PageNavigation $pageNavigation = null): ?array
     {
         $sectionResult = $this->sectionListAction(
             iblockId: $iblockId,
